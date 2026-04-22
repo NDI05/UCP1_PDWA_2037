@@ -1,11 +1,13 @@
-<!-- Halaman Utama Sebagai Media Informasi serta navigasi ke pages lain nya -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Community</title>
+    <title>Tech Community | Landing Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/styleForm.css">
+    <link rel="stylesheet" href="./styles/styleLanding.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,22 +21,27 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./pages/form.html">Daftar Anggota</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="./pages/gallery.html">Dokumentasi</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div>
-        <center>
-            <h1>
-                SELAMAT DATANG, TECHKOM
-            </h1>
-            <h3>
-                "Komunitas Pencinta Teknologi Terkini"
-            </h3>
-        </center>
-    </div>
-    
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">SELAMAT DATANG DI TECHKOM</h1>
+            <p class="hero-subtitle">Komunitas Pencinta Teknologi Terkini</p>
+            <p class="hero-description">Bergabunglah dengan ribuan developer dan tech enthusiast untuk berbagi pengetahuan, networking, dan mengembangkan skill teknologi Anda</p>
+            <div class="hero-buttons">
+                <a href="./pages/form.html" class="btn btn-hero btn-hero-primary">Daftar Anggota</a>
+                <a href="./pages/gallery.html" class="btn btn-hero btn-hero-secondary">Lihat Dokumentasi</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
