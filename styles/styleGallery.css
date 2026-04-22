@@ -1,0 +1,389 @@
+/* Gallery Header Styling */
+.gallery-header {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.gallery-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.gallery-header p {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+/* Filter Button Container */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+    border: 2px solid #333333;
+    background-color: white;
+    color: #333333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    background-color: #333333;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn.active {
+    background-color: #000000;
+    color: white;
+    border-color: #000000;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gallery Item */
+.gallery-item {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.4s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-item.hidden {
+    display: none;
+}
+
+/* Media Wrapper for Images and Videos */
+.media-wrapper {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+    background: #f5f5f5;
+}
+
+.media-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .media-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-thumbnail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: white;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.video-wrapper img {
+    opacity: 0.6;
+}
+
+/* Audio Wrapper */
+.audio-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    padding: 25px 20px;
+    border: 1px solid #ddd;
+    min-height: 100px;
+}
+
+.audio-icon {
+    font-size: 2.5rem;
+    color: #33333320px;
+    flex-shrink: 0
+    margin-right: 15px;
+}
+
+.audio-info-preview {
+    color: white;
+}
+
+.audio-info-preview h6 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.audio-info-preview p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Media Overlay */
+.media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .media-overlay {
+    opacity: 1;
+}
+
+/* View Button */
+.btn-view {000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-view:hover {
+    background-color: #333333;
+}
+
+.btn-view:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Media Info */
+.media-info {
+    padding: 15px;
+}
+
+.media-info h5 {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+    color: #000000;
+    font-size: 0.95rem;
+}
+
+.media-category {
+    color: #666666;
+    font-weight: 600;
+    margin: 6px 0;
+    font-size: 0.8rem;
+}
+
+.media-date {
+    color: #999999;
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.audio-info-preview {
+    color: #333333;
+}
+
+.audio-info-preview h6 {
+    margin: 0;
+    font-weight: bold;
+    color: #333333;
+}
+
+.audio-info-preview p {
+    margin: 5px 0 0 0;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+/* Media Contr2px 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.media-controls audio {
+    width: 100%;
+    height: 32s audio {
+    width: 100%;
+    height: 28px;
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.embed-responsive {
+    background: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .gallery-header {
+        padding: 30px 15px;
+    }
+
+    .gallery-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-header p {
+        font-size: 0.9rem;
+    }
+
+    .filter-container {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .audio-icon {
+        font-size: 2rem;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .gallery-header {
+        padding: 25px 12px;
+        margin-bottom: 20px;
+    }
+
+    .gallery-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .gallery-header p {
+        font-size: 0.85rem;
+    }
+
+    .filter-container {
+        padding: 0 8px;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .filter-btn {
+        padding: 7px 10px;
+        font-size: 0.75rem;
+    }
+
+    .audio-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .audio-icon {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+}
+
+/* Animation for filtering */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-item.show {
+    animation: slideIn 0.3s ease;
+}
