@@ -5,54 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Community | Daftar Anggota</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styleForm.css"/>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="../index.html">Tech Community</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <a class="navbar-brand" href="../index.html">Tech Community</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./form.html">Daftar Anggota</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./gallery.html">Dokumentasi</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div style="display: flex; flex-direction: column; justify-content: center; width: 100vw; align-content: center; align-items: center;">
-            <div style="width: 25vw; padding-top: 5vh; padding-bottom: 10vh; display: flex; flex-direction: column;">
-                    <h1>AYOK JOIN TECHKOM!</h1>
-                        <label>Nama</label>
-                        <input type="text" id="textNama"/>
-                        <label>Email</label>
-                        <input type="email" id="textEmail"/>
-                        <!-- <label>Minat</label>
-                        <input type="radio" id="radioMinat" value=""/> -->
-                        <button id="submitBtn">DAFTAR SEKARANG!</button>
-            </div>
-            <div>
-                <h2>
-                    Anggota Yang Telah Mendaftar
-                </h2>
-                <table border="5">
-                    <tr>
-                        <td>
-                            NO
-                        </td>
-                        <td>
-                            NAMA
-                        </td>
-                        <td>
-                            MINAT
-                        </td>
-                    </tr>
-                </table>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./form.html">Daftar Anggota</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./gallery.html">Dokumentasi</a>
+                </li>
+            </ul>
         </div>
+    </nav>
+
+    <div class="form-container">
+        <h1>AYOK JOIN TECHKOM!</h1>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="textNama">Nama Lengkap</label>
+                <input type="text" class="form-control" id="textNama" placeholder="Masukkan nama lengkap Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="textEmail">Email</label>
+                <input type="email" class="form-control" id="textEmail" placeholder="Masukkan email Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="textMinat">Minat Teknologi</label>
+                <select class="form-control" id="textMinat" required>
+                    <option value="">-- Pilih Minat --</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Mobile Development">Mobile Development</option>
+                    <option value="AI & Machine Learning">AI & Machine Learning</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-dark btn-submit" id="submitBtn">DAFTAR SEKARANG!</button>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <h2>Anggota Yang Telah Mendaftar</h2>
+        <div id="tableWrapper">
+            <p class="empty-message">Belum ada anggota yang terdaftar. Daftarkan diri Anda sekarang!</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
