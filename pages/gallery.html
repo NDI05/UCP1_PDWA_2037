@@ -33,38 +33,16 @@
         <p>Koleksi konten visual dari kegiatan Tech Community</p>
     </div>
 
-    <div class="filter-container">
-        <button class="filter-btn active" data-filter="all">Semua</button>
-        <button class="filter-btn" data-filter="image">Gambar</button>
-        <button class="filter-btn" data-filter="video">Video</button>
-        <button class="filter-btn" data-filter="audio">Audio</button>
-    </div>
-
     <div class="gallery-container">
         <div class="gallery-item" data-category="image">
             <div class="media-wrapper">
                 <img src="../assets/image1.jpg" alt="Event 1" onerror="this.src='https://via.placeholder.com/300x300?text=Tech+Event+1'">
-                <div class="media-overlay">
-                    <button class="btn-view" data-toggle="modal" data-target="#imageModal" onclick="viewImage('../assets/image1.jpg', 'Acara Tech Community #1')">
-                        <i class="fas fa-search-plus"></i> Lihat
-                    </button>
-                </div>
-            </div>
-            <div class="media-info">
-                <h5>Acara Tech Community #1</h5>
-                <p class="media-category">Gambar</p>
-                <small class="media-date">22 April 2024</small>
             </div>
         </div>
 
         <div class="gallery-item" data-category="image">
             <div class="media-wrapper">
                 <img src="../assets/image2.jpg" alt="Workshop" onerror="this.src='https://via.placeholder.com/300x300?text=Workshop+Web'">
-                <div class="media-overlay">
-                    <button class="btn-view" data-toggle="modal" data-target="#imageModal" onclick="viewImage('../assets/image2.jpg', 'Workshop Web Development')">
-                        <i class="fas fa-search-plus"></i> Lihat
-                    </button>
-                </div>
             </div>
             <div class="media-info">
                 <h5>Workshop Web Development</h5>
@@ -91,16 +69,7 @@
 
         <div class="gallery-item" data-category="video">
             <div class="media-wrapper video-wrapper">
-                <div class="video-thumbnail">
-                    <i class="fas fa-play"></i>
-                </div>
-                <video src="../assets/video1.mp4" onerror="this.style.display='none'"></video>
-                <img src="../assets/video1-thumb.jpg" alt="Tutorial Video" onerror="this.src='https://via.placeholder.com/300x300?text=Tutorial+Video'">
-                <div class="media-overlay">
-                    <button class="btn-view" data-toggle="modal" data-target="#videoModal" onclick="viewVideo('../assets/video1.mp4', 'Tutorial: Memulai Web Development')">
-                        <i class="fas fa-play"></i> Putar
-                    </button>
-                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Myp0C2_SAEo?si=iNaR9lHVNBehXr28" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="media-info">
                 <h5>Tutorial: Memulai Web Development</h5>
@@ -111,16 +80,7 @@
 
         <div class="gallery-item" data-category="video">
             <div class="media-wrapper video-wrapper">
-                <div class="video-thumbnail">
-                    <i class="fas fa-play"></i>
-                </div>
-                <video src="../assets/video2.mp4" onerror="this.style.display='none'"></video>
-                <img src="../assets/video2-thumb.jpg" alt="Webinar" onerror="this.src='https://via.placeholder.com/300x300?text=Webinar+2024'">
-                <div class="media-overlay">
-                    <button class="btn-view" data-toggle="modal" data-target="#videoModal" onclick="viewVideo('../assets/video2.mp4', 'Webinar: AI dan Machine Learning')">
-                        <i class="fas fa-play"></i> Putar
-                    </button>
-                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/lgM5UsGTHj4?si=ZZpFY4-BS8W9Lplq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="media-info">
                 <h5>Webinar: AI dan Machine Learning</h5>
@@ -131,16 +91,7 @@
 
         <div class="gallery-item" data-category="video">
             <div class="media-wrapper video-wrapper">
-                <div class="video-thumbnail">
-                    <i class="fas fa-play"></i>
-                </div>
-                <video src="../assets/video3.mp4" onerror="this.style.display='none'"></video>
-                <img src="../assets/video3-thumb.jpg" alt="Workshop Video" onerror="this.src='https://via.placeholder.com/300x300?text=Workshop+Video'">
-                <div class="media-overlay">
-                    <button class="btn-view" data-toggle="modal" data-target="#videoModal" onclick="viewVideo('../assets/video3.mp4', 'Workshop: React JS Advanced')">
-                        <i class="fas fa-play"></i> Putar
-                    </button>
-                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wKDRkmuzT3U?si=P4ai7fbMATcC5bO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="media-info">
                 <h5>Workshop: React JS Advanced</h5>
@@ -215,41 +166,6 @@
                 <h5>Tech Tips: Produktivitas Developer</h5>
                 <p class="media-category">Audio</p>
                 <small class="media-date">03 April 2024</small>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageTitle">Lihat Gambar</h5>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <img id="modalImage" src="" alt="Full Size Image" style="max-width: 100%; height: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="videoTitle">Putar Video</h5>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <video id="modalVideo" width="100%" height="auto" controls>
-                        <source src="" type="video/mp4">
-                        Browser Anda tidak mendukung video tag.
-                    </video>
-                </div>
             </div>
         </div>
     </div>
